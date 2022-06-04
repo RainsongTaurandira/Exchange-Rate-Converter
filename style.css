@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #ffc757;
+    --background-color: #f4f4f4;
+    --btn-color: rgb(25, 26, 25);
+    --select-border: #dedede;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: var(--background-color);  */
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: url(img/5b257c18a80c1d8f_1920.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    margin: 0;
+    padding: 1.25rempx;
+}
+
+h1, p {
+    color: var(--primary-color);
+    text-align: center;
+}
+/* 
+p {
+    text-align: center;
+    color: var(--primary-color);
+} */
+
+.big-container {
+    background-color: rgba(0, 0, 0, .7);
+    height: 50vh;
+    position: absolute;
+    top: 25%;
+    width: 60vw;
+    border-radius: 25px;
+    border: 5px solid var(--primary-color);
+}
+
+.inner-container {
+   /* margin: 2rem; */
+    width: 80%;
+    margin: auto;
+}
+#swap {
+    color: var(--btn-color); 
+    background-color: var(--primary-color);
+
+    cursor: pointer;
+
+    border-radius: 10px;
+    font-size: 1rem; 
+    padding: .5rem 1rem;
+}
+
+.money-img {
+    width: 9rem;
+}
+
+.currency {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currency select {
+    padding: .6rem 1.25rem .6rem .6rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    border: 1px solid var(--select-border);
+    font-size: 1rem;
+    background: var(--primary-color);
+    border-radius: 10px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-position: right 10px top 50%, 0, 0;
+    background-size: 12px auto, 100%;
+    background-repeat: no-repeat;
+    /* SVG supplied in lecture*/
+}
+
+.currency input {
+    border: 0;
+    background: transparent;
+    font-size: 2rem;
+    text-align: right;
+    color: var(--primary-color);
+}
+
+.swap-rate-container {
+    display: flex;
+   margin: 0 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate {
+    color: var(--primary-color);
+    font-size: .8rem;
+    padding: 0 .6rem;
+}
+
+select:focus, input:focus, button:focus {
+    outline: 0;
+}
+
+@media(max-width: 840px) {
+    .big-container {
+        width: 95vw;
+    }
+    .currency input {
+        width: 12rem;
+    }
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: .75rem;
+    background-color: rgba(0, 0, 0, .7);
+    border: 5px solid var(--primary-color);
+    border-radius: 15px;
+    
+}
+
+.footer p {
+    font-size: .5rem;
+}
